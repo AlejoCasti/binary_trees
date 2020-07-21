@@ -30,7 +30,7 @@ void go_through(const binary_tree_t *node, void (*func)(int))
  * Return: 1 if node is a root, otherwise 0
  */
 
-void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (!tree || !func)
 		return;
