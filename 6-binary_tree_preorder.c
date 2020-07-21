@@ -32,5 +32,7 @@ void go_through(const binary_tree_t *node, void (*func)(int))
 
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
+	if (!tree || !func)
+		return;
 	go_through(tree, func);
 }
