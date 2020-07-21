@@ -1,16 +1,17 @@
 #include "binary_trees.h"
 /**
- * binary_tree_height - fucntion that goes through a binary tree
+ * binary_tree_height - return the size of tree
  * @tree: pointer to root
  * Return: size of the tree
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+	size_t size = 0;
 	if (!tree)
-		return (0);
+		return (size);
 	if (tree->left && tree->right)
-		return (2);
+		return (size += 2, size);
 	else if (tree->left || tree->right)
-		return (1);
-	return (0);
+		return (size += 1, size);
+	return (size);
 }
